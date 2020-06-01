@@ -17,10 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/success', function() {
+    return view('success');
+})->name('success');
 
+Route::get('/failed', function() {
+    return view('failed');
+})->name('failed');
 
-Route::post('/pay', 'RaveController@initiate');
-Route::get('/pay', 'RaveController@initiate');
+Route::post('/pay', 'RaveController@initiate')->name('pay');
+Route::get('/pay', 'RaveController@initiate')->name('pay');
 Route::get('/checkout', 'RaveController@checkout')->name('checkout');
-Route::post('/checkout/:id', 'RaveController@checkout')->name('checkout');
+Route::post('/checkout', 'RaveController@checkout')->name('checkout');
+Route::post('/webhook', 'RaveController@webhook');
+Route::post('/callback', 'RaveController@callback')->name('callback');
+Route::get('/onclose', 'RaveController@onclose')->name('onclose');
+
 
