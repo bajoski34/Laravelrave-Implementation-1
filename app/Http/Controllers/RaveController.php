@@ -85,7 +85,7 @@ class RaveController extends Controller
         }
         
         // Store the same signature on your server as an env variable and check against what was sent in the headers
-        $local_signature = 'yesyesYes!';
+        $local_signature = env('SECRET_HASH');
 
         // confirm the event's signature
         if ($signature !== $local_signature) {
