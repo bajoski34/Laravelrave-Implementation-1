@@ -1,4 +1,4 @@
-## Laravel implementation for Flutterwave Using Rave Standard
+## Laravel 7  implementation for Flutterwave Using Rave Standard
 
 Flutterwave offers payment collections. There are several ways of Integrating flutterwave into your platform:
 
