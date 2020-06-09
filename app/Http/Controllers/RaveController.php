@@ -73,7 +73,7 @@ class RaveController extends Controller
         $body = @file_get_contents("php://input");
 
         // retrieve the signature sent in the reques header's.
-        $signature = (isset($_SERVER['HTTP_VERIF']) ? $_SERVER['HTTP_VERIF'] : '');
+        $signature = (isset($_SERVER['HTTP_VERIF_HASH']) ? $_SERVER['HTTP_VERIF_HASH'] : '');
 
         /* It is a good idea to log all events received. Add code *
         * here to log the signature and body to db or file       */
